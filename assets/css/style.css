@@ -48,7 +48,7 @@
   
   --fw-400: 400;
   --fw-600: 600;
-  --fw-700: 700;
+  --fw-700: 400;
 
   /**
    * spacing
@@ -407,7 +407,10 @@ body {
   gap: 30px;
 }
 
-.hero .section-subtitle { text-transform: unset; }
+.hero .section-subtitle {
+  padding-top: 7rem;
+   text-transform: unset;
+   }
 
 .hero .section-text {
   color: var(--white);
