@@ -39,9 +39,9 @@
   --ff-chakra-petch: 'Chakra Petch', sans-serif;
   --ff-mulish: 'Mulish', sans-serif;
   
-  --fs-1: 3.5rem;
+  --fs-1: 3.0rem;
   --fs-2: 2rem;
-  --fs-3: 2.4rem;
+  --fs-3: 2.0rem;
   --fs-4: 1.8rem;
   --fs-5: 1.4rem;
   --fs-6: 1.2rem;
@@ -1378,4 +1378,26 @@ body {
   0% { transform: translateX(0); }
   /* Slide exactly 50% of the track (the first set of logos) */
   100% { transform: translateX(calc(-250px * 5)); }
+}
+
+.gallery-container {
+  display: grid;
+  /* Adjust '200px' to change the minimum width of each image */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px; /* Spacing between images */
+  padding: 15px;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 300px; /* Fixed height for uniformity */
+  object-fit: cover; /* Crops the image to fill the area without stretching */
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.gallery-container img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
 }
